@@ -1,6 +1,7 @@
-from typing import Iterable, List
 
 # 2133. Check if Every Row and Column Contains All Numbers
+
+from typing import Iterable, List
 
 class Solution:
     def checkValid(self, matrix: List[List[int]]) -> bool:

@@ -1,3 +1,4 @@
+
 # 2141. Maximum Running Time of N Computers
 
 from typing import List

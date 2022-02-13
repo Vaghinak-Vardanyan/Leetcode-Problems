@@ -1,7 +1,7 @@
-from collections import deque
-
 
 # 2127. Maximum Employees to Be Invited to a Meeting
+
+from collections import deque
 
 class Solution:
     def maximumInvitations(self, favorite: list[int]) -> int:

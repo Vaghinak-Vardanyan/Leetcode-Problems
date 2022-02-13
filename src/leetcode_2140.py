@@ -1,3 +1,4 @@
+
 # 2140. Solving Questions With Brainpower
 
 from typing import List
