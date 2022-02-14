@@ -21,4 +21,4 @@ class Solution:
 
         return result
 
-print(Solution().longestCommonPrefix(["alower","flow","flight"]))
+print(Solution().longestCommonPrefix(["flower","flow","flight"]))
