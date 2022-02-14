@@ -24,4 +24,5 @@ class Solution:
 
         return result
 
+
 print(Solution().lengthOfLongestSubstring("au"))
