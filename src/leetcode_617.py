@@ -1,7 +1,7 @@
 
 # 617. Merge Two Binary Trees
 
-from typing import Optional
+from typing import Optional, List
 
 # Definition for a binary tree node.
 class TreeNode:
@@ -10,7 +10,8 @@ class TreeNode:
         self.left = left
         self.right = right
 
-class Solution:
+
+class RecursiveSolution:
     def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
         
         if not root1:
@@ -24,3 +25,36 @@ class Solution:
         root1.val = root1.val + root2.val
         
         return root1
+
+
+class IterativeSolution:
+    def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
+        
+        if not root1:
+            return root2
+        
+        if not root2:
+            return root1
+        
+        stack: List[int] = [(root1, root2)]
+            
+        while stack:
+            current = stack.pop()
+            
+            if not current[1]:
+                continue
+            
+            if not current[0].left:
+                current[0].left = current[1].left
+            else:
+                stack.append((current[0].left, current[1].left))
+                
+            if not current[0].right:
+                current[0].right = current[1].right
+            else:
+                stack.append((current[0].right, current[1].right))
+            
+            current[0].val += current[1].val
+        
+        return root1
+                
