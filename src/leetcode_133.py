@@ -1,11 +1,11 @@
 
 # 133. Clone Graph
 
-from typing import Optional
+from typing import Optional, List
 
 # Definition for a Node.
 class Node:
-    def __init__(self, val = 0, neighbors: Optional[list['Node']] = None):
+    def __init__(self, val = 0, neighbors: Optional[List['Node']] = None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 
