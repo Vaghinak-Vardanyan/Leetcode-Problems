@@ -1,7 +1,7 @@
 
 # 617. Merge Two Binary Trees
 
-from typing import Optional, List
+from typing import Optional, List, Tuple
 
 # Definition for a binary tree node.
 class TreeNode:
@@ -36,7 +36,7 @@ class IterativeSolution:
         if not root2:
             return root1
         
-        stack: List[int] = [(root1, root2)]
+        stack: List[Tuple(Optional[TreeNode], Optional[TreeNode])] = [(root1, root2)]
             
         while stack:
             current = stack.pop()
